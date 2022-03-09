@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>M083040003</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">M083040003</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              軟體規格書
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="specification-1.html">輸入與輸出規格</a>
+              <a class="dropdown-item" href="specification-2.html">功能與介面規格</a>
+              <a class="dropdown-item" href="specification-3.html">軟體測試規劃書</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="direction.html">軟體說明</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">程式設計</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">軟體測試與實驗結果</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="conclusion.html">結論與心得</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appendix.html">附錄</a>
+          </li>                     
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">結論與心得</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">結論與心得</li>
+    </ol>
+
+    <p style="padding: 1%; font-size: 1.2em;">實作這個專題最大的收穫，就是徹徹底底地了解到資料結構與演算法的重要性。初測時點數僅限三點，可以簡單地將情況分成直角三角形、鈍角三角形及銳角三角形來處理，透過向量內積加以判斷，再多加留意共點、共線的問題，即可畫出正確的Voronoi圖形。但複測就不一樣了，四點以上的情況，完全無法使用投機取巧的方式蒙混過關，只能踏踏實實地思考整個流程。</p>
+    <p style="padding: 1%; font-size: 1.2em;">由於已經許久不曾接觸平面向量了，剛開始著手進行專題時，連內積和外積的概念都不記得，就更別提公式了。但隨著複習這些數學觀念，解決的方法也逐漸浮現，也才赫然發現原來將內外積的觀念及克拉瑪公式應用在這種問題中，可以發揮這麼大的功能。此外，也體會到了解決同一個問題時，根據使用的演算法不同，效能上會有很大的差異，像是要找出ConvexHull時，使用O(N)的演算法，在點的個數較多時，便能明顯看出與O(NM)速度上的差異。</p>
+    <p style="padding: 1%; font-size: 1.2em;">目前使用Jarvis' March(Gift Wrapping Algorithm)做為尋找Convex Point的演算法，但此演算法的時間複雜度為O(NM)，M為Convex Point的個數。若要讓整體效能更好，可以改成使用Graham's Scan或Andrew's Monotone Chain的方式將時間複雜度降至O(N)，此為第一個可以改進的部分。另外，在判斷特定具有共點或多點共線的圖形時，程式會產生錯誤的結果，甚至陷入無窮迴圈，初步判斷應為Merge時找出左右兩半切點的方式具有瑕疵，此為第二個能改進的部分。</p>
+    <p style="padding: 1%; font-size: 1.2em;">最後，雖然初測時有盡力將程式修改至完善，但在開始進行後半部撰寫時才發現原先使用的資料結構完全無法應付接下來的各種情況，只好進行大幅度的修改，思考如何才能更方便簡潔地達到目的。儘管實作過程中不斷出現Bug非常令人沮喪，但冷靜分析、找出問題並一個個解決，卻是讓人充滿成就感，也讓我對於演算法有了更深一步的了解與體會。</p>
+    <hr>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; M083040003</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

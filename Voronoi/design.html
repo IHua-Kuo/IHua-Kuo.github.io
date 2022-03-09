@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>M083040003</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">M083040003</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              軟體規格書
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="specification-1.html">輸入與輸出規格</a>
+              <a class="dropdown-item" href="specification-2.html">功能與介面規格</a>
+              <a class="dropdown-item" href="specification-3.html">軟體測試規劃書</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="direction.html">軟體說明</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">程式設計</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">軟體測試與實驗結果</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="conclusion.html">結論與心得</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appendix.html">附錄</a>
+          </li>                     
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">程式設計</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">程式設計</li>
+    </ol>
+
+    <div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h5 class="mb-0" style="padding-left: 0;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">資料結構</a>
+          </h5>
+        </div>
+        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+          <div class="card-body">
+            <ul>
+              <li>點座標主要以PointF(浮點數座標)儲存</li>
+              <li>線段主要以自定義的VoronoiEdge儲存</li>
+              <li>多種不同型態的陣列交互使用時，使用ArrayList儲存</li><hr>
+              <li>自定義的Class-VoronoiEdge</li>
+              <ul>
+                <li>建構子(Constructor)</li>
+                <ul>
+                  <li>startPoint: 線段起點(X座標較小的端點)</li>
+                  <li>endPoint: 線段終點(X座標較大的端點)</li>
+                  <li>parentLow: 產生這條線段(中垂線)的兩個點中，Y座標較小的點</li>
+                  <li>parentHigh: 產生這條線段(中垂線)的兩個點中，Y座標較大的點</li>
+                </ul>
+                <li>功能函數(Function)</li>
+                <ul>
+                  <li>getLowPoint(): 取得線段Y座標較小的端點</li>
+                  <li>getHighPoint(): 取得線段Y座標較大的端點</li>
+                </ul>
+              </ul>              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h5 class="mb-0" style="padding-left: 0;">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">讀取資料
+            </a>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="card-body">
+            以全域變數alreadyRead紀錄目前已讀取至該檔案的第幾行。每次要繼續讀取下一筆測試資料時，皆重新讀取檔案並自動忽略已讀取過的資料。
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingThree">
+          <h5 class="mb-0" style="padding-left: 0;">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Divide & Conquer</a>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="card-body">
+          由於點座標皆根據X座標進行字典序排列，因此分割時只需將前半段放入左集合、剩餘的放入右集合即可。若分割後的集合點個數仍大於三個點，則繼續分割(Recursive)。
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingFour">
+          <h5 class="mb-0" style="padding-left: 0;">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">取得凸包與公切點
+            </a>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="card-body">
+          <ul>
+            <li>尋找凸包(Convex Hull)中的點</li>
+            <p>以Jarvis' March(Gift Wrapping Algorithm)演算法實作Convex Hull。首先找出所有點中最左下角的點(此點必為Convex Hull的其中一點)。以此點為中心，使用迴圈的方式檢查其餘的點與中心點外積的值是否大於0，最終能得出在順時針方向最靠外的點，即為下一個Convex Point，下一輪的檢查便改以該點為中心。以此類推，當檢查點等於最初起始點(所有點中最左下角的點)時，代表尋找完畢。</p>
+            <hr>
+
+            <li>尋找公切點</li>
+            <p>欲找出上下各兩點的公切點，首先要找到左右兩半各自的Convex Hull點集合，再看合併後點集合的Convex Hull中的第一個點(也就是最左下角的點)是屬於哪一半邊的Convex Hull，循序比對合併後點集合的Convex Hull中的點是屬於哪一邊，當發現換邊代表找到兩個公切點(左右各一)，找到兩次即結束。</p>
+            <hr>
+
+            <li>公切點與Hyperline</li>
+            <p>將兩個上切點做為基準點所畫出的中垂線，即為第一條Hyperline，待基準點輪到兩個下切點時，所畫出的中垂線即為最後一條Hyperline。</p>
+          </ul>
+            
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingFive">
+          <h5 class="mb-0" style="padding-left: 0;">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">修改線段端點</a>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="card-body">
+            <ul>
+              <li>修改中垂線(Hyperline)的端點</li>
+              <p>檢查中垂線與左右VoronoiEdge線段的交點，找出Y座標最小的端點做為交點，產生該交點的線段即為交線。接著將中垂線Y座標較大的端點改成交點，將Y座標較小的端點改成上一個交點(若為第一條則忽略此步驟)。</p>
+              <hr>
+
+              <li>修改左右VoronoiEdge的端點</li>
+              <p>從左右VoronoiEdge中找出交線，並透過外積判斷中垂線Y座標較小的端點、交點、交線的起點三者的相對關係，並根據判斷結果修改端點。</p><hr>
+
+              <li>線段走向</li>
+              <p>找出交線的另一個parent點，將其做為畫出下一條Hyperline的基準點(另一個基準點不變)。</p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingSix">
+          <h5 class="mb-0" style="padding-left: 0;">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">清除不需要的線段</a>
+          </h5>
+        </div>
+        <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
+          <div class="card-body">
+            以迴圈的方式檢查，若有左半邊Voronoi的線段出現在某一條Hyperline的右邊，代表其是多餘的線，須清除；反之，若右半邊Voronoi的線段出現在某一條Hyperline的左邊也須清除。
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" role="tab" id="headingSeven">
+          <h5 class="mb-0" style="padding-left: 0;">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">Step By Step</a>
+          </h5>
+        </div>
+        <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
+          <div class="card-body">
+            採用Thread分開主程序與副程序，配合無窮迴圈while的使用讓程式暫停，便可簡單地用一個boolean變數控制程式的進行。
+          </div>
+        </div>
+      </div>
+
+
+      
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; M083040003</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

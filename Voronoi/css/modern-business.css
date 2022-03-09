@@ -1,0 +1,73 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+  font-family: 'Noto Sans TC', 'Roboto';
+}
+
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+h1{  
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 3.6em;
+    line-height: 1.7em;
+    text-align: center;
+}
+
+h3{  
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 2em;    
+}
+
+h4{  
+    color:  #4682B4; 
+    padding-top: 15%;
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-weight: bold;    
+}
+
+h5{  
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-size: 1.5em;    
+    padding-left: 40%;
+}
+
+li{
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-size: 1em;  
+}
+
+p{
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-size: 1em; 
+}
+
+.card-body{
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-size: 1.2em; 
+
+}
+
+.subtitle{
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}

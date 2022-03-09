@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>M083040003</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">M083040003</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              軟體規格書
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="specification-1.html">輸入與輸出規格</a>
+              <a class="dropdown-item" href="specification-2.html">功能與介面規格</a>
+              <a class="dropdown-item" href="specification-3.html">軟體測試規劃書</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="direction.html">軟體說明</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">程式設計</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">軟體測試與實驗結果</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="conclusion.html">結論與心得</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appendix.html">附錄</a>
+          </li>                     
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">軟體規格書</h1>
+    <p class="subtitle">【 功能與介面規格 】</p> 
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">軟體規格書</li>
+    </ol>
+
+    <!-- Project One -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/interface.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>介面規格</h3>
+        <hr>
+        <ul>
+          <li>左半部為長寬皆為700的畫布</li>
+          <li>右半部為功能控制面板</li>
+          <ul>
+            <li>輸入資料的方式</li>
+              <ul>
+                <li>點擊畫布輸入</li>
+                <li>使用文字檔輸入</li>
+              </ul>
+            <li>已輸入的資料</li>
+              <ul>
+                <li>每個點的X、Y座標(以字典序排列)</li>
+                <li>每條線段的兩端點座標(以字典序排列)</li>
+              </ul>
+            <li>執行的模式</li>
+              <ul>
+                <li>執行(直接顯示出執行結果)</li>
+                <li>步驟解析(每次Merge之前暫停)</li>
+                <li>凸包(每次Merge之前暫停)</li>
+              </ul>            
+          </ul>
+          <p></p>
+          <li>清空畫布 : 初始化畫布與所有功能變數</li>          
+          <li>輸出檔案 : 將畫布上的點與線段資料儲存成文字檔(.txt)</li>
+          
+        </ul> 
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Two -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">          
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/run-2.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>執行(Run)</h3>      
+        <hr>         
+        <ul>
+          <li>執行模式會將結果直接呈現在畫布上</li>
+          <li>線段結果資料顯示於右方</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Three -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/step-2.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>步驟解析(Step By Step)</h3>
+        <hr>
+        <h4>第一步</h4>
+        <ul>
+          <li>以天藍色代表左半邊的Voronoi Diagram</li>
+          <li>以淺澄色代表右半邊的Voronoi Diagram</li>
+        </ul>      
+      </div>
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/step-3.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h4>第二步</h4>
+        <ul>
+          <li>將左右兩半的Voronoi Diagram進行Merge</li>
+          <li>以灰色線畫出Convex Hull</li>
+          <li>以紅色線畫出Hyperline</li>
+        </ul>      
+      </div>
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/step-4.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h4>第三步</h4>
+        <ul>
+          <li>修整Hyperline的端點</li>
+          <li>修整左右兩邊Voronoi Diagram的端點</li>
+          <li>去除多餘的線段</li>
+          <li>以紅色線畫出最終結果的Voronoi Diagram</li>
+        </ul>      
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Four -->
+    <div class="row">
+
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/convex-2.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>凸包(Convex Hull)</h3>
+        <hr>
+        <h4>第一步</h4>
+        <ul>
+          <li>左半邊的Convex Hull端點以天藍色表示</li>
+          <li>右半邊的Convex Hull端點以淺澄色表示</li>
+          <li>以灰色線畫出各自的Convex Hull</li>
+        </ul>    
+      </div>
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/convex-3.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h4>第二步</h4>
+        <ul>
+          <li>將左右兩半的Convex Hull進行Merge</li>
+          <li>以灰色線畫出完整的Convex Hull</li>
+        </ul>      
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; M083040003</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

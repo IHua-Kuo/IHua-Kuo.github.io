@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>M083040003</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">M083040003</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              軟體規格書
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="specification-1.html">輸入與輸出規格</a>
+              <a class="dropdown-item" href="specification-2.html">功能與介面規格</a>
+              <a class="dropdown-item" href="specification-3.html">軟體測試規劃書</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="direction.html">軟體說明</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">程式設計</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">軟體測試與實驗結果</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="conclusion.html">結論與心得</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appendix.html">附錄</a>
+          </li>                     
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">軟體測試與結果</h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">軟體測試與結果</li>
+    </ol>
+
+    <!-- Project One -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/systemInfo.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>測試環境</h3>
+        <hr>
+        <ul>
+          <li><h4 style="padding-top: 0;">作業系統</h4></li>
+          <p>Windows 10 企業版</p>
+          <li><h4 style="padding-top: 0;">處理器</h4></li>
+          <p>Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz 2.10GHz</p>   
+          <li><h4 style="padding-top: 0;">記憶體容量</h4></li>
+          <p>8.00GB</p>       
+        </ul>        
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Two -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/compiler.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>編譯器</h3>
+        <hr>
+        <ul>
+          <li><h4 style="padding-top: 0;">編譯器名稱</h4></li>
+          <p>Microsoft Visual Studio C#</p>
+          <li><h4 style="padding-top: 0;">版本</h4></li>
+          <p>Visual Studio 2010 Premium (10.0.40219.1 SP1Rel)</p> 
+        </ul>      
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Three -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-fluid rounded mb-3 mb-md-0" src="Image/result_350points.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>實驗結果</h3>
+        <hr>
+        <ul>
+          <li><h4 style="padding-top: 0;">極限數據</h4></li>
+          <ul>
+            <li style="font-size: 1em;">目前僅測試到350個點，結果如左圖所示。</li>
+            <li style="font-size: 1em;">執行時間約莫二十分鐘至半小時左右。</li>
+            <li style="font-size: 1em;"><p style="margin-bottom: 0;"><a href="data/input_350points.txt" class="dataLink">極限數據輸入檔</a></p></li>
+            <li style="font-size: 1em;"><p><a href="data/output_350points.txt" class="dataLink">極限數據輸出檔</a></p></li>
+          </ul>
+          <li><h4 style="padding-top: 0;">瑕疵</h4></li>
+          <p>進行複測時，發現在多點共線的情況會陷入無窮迴圈或繪製錯誤的線段，初步判斷是由於在Merge階段找尋切點的方式不夠周詳。</p>
+        </ul>    
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; M083040003</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

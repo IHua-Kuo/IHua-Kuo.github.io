@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>M083040003</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">M083040003</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              軟體規格書
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="specification-1.html">輸入與輸出規格</a>
+              <a class="dropdown-item" href="specification-2.html">功能與介面規格</a>
+              <a class="dropdown-item" href="specification-3.html">軟體測試規劃書</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="direction.html">軟體說明</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="design.html">程式設計</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="test.html">軟體測試與實驗結果</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="conclusion.html">結論與心得</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="appendix.html">附錄</a>
+          </li>                     
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">軟體規格書</h1>
+    <p class="subtitle">【 軟體測試規劃書 】</p> 
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="breadcrumb-item active">軟體規格書</li>
+    </ol>
+
+    <!-- Portfolio Item Row -->
+    <div class="row" style="padding: 1%;">
+
+      <!-- <div class="col-md-8">
+        <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+      </div>
+ -->
+      <div></div>
+
+      <div class="col-md-12">
+        <h3 class="my-3">專案目的</h3>
+        <ul style="font-family: 'Amarante', Tahoma, sans-serif;font-size: 1em;">使用Divide-and-Conquer方法，實作Voronoi Diagram。</ul>
+        
+        <hr>
+        <h3 class="my-3">測試規劃</h3>
+          <ul>
+            <li><h4 style="padding-top: 0;">測試項目</h4></li>
+            <ul>
+              <li>三點以下直接畫出Voronoi Diagram(包含外心判定、共點、共線等問題)</li>
+              <li>三點以上運用Divide and Conquer繪出Convex Hull</li>
+              <li>三點以上運用Divide and Conquer繪出Voronoi Diagram</li>
+              <li>清除多餘的線段、畫布範圍外的線段、重複的線段及長度為0的線段</li>
+              <li>輸入與輸出功能</li>
+            </ul>
+            <p></p>
+            
+            <li><h4 style="padding-top: 0;">測試方法</h4></li>
+            <ul>
+              <li>輸入各種情況的點座標(包含三點共線、多點包多點等等)</li>
+              <li>輸入六點以上測試資料(看是否能正確Recursive Divide)</li>
+              <li>輸入會使外心位在畫布範圍外的情形，觀察線段是否輸出正確</li>
+              <li>輸入特殊情形，觀察Hyperline的範圍是否重疊</li>              
+            </ul>
+          <p></p>
+
+          <li><h4 style="padding-top: 0;">測試結果</h4></li>
+            <ul>
+              <li>能正確Divide與Merge並顯示出各種情況的Convex Hull</li>
+              <li>大部份情況下，能正確Divide與Merge並顯示出各種情況的Voronoi Diagram，但在某些三點以上共線的情形下會有錯誤或陷入無窮迴圈</li>
+              <li>能正確清除多餘的線段、畫布範圍外的線段、重複的線段及長度為0的線段</li>              
+              <li>能正確輸入與輸出資料</li>            
+            </ul>
+          <p></p>
+        </ul>
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+    <!-- Related Projects Row -->
+    <h3 class="my-4"></h3>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; M083040003</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
